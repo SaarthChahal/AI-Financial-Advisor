@@ -1,0 +1,5 @@
+google-adk
+yfinance
+pydantic
+numpy
+pandas

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: adk-agent-app
+    env: docker
+    plan: free
+    branch: main
+    buildFilter:
+      paths:
+        - app/**
+        - Dockerfile
+        - requirements.txt
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # You will add this manually in Render dashboard
+    autoDeploy: true
